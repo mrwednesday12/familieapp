@@ -15,6 +15,7 @@ import { auth } from 'firebase/app';
 import { AuthService } from './auth/auth.service';
 import { HttpClientModule} from '@angular/common/http';
 import { TasksService } from './shared/services/tasks/tasks.service';
+import { ShoplistService } from './shared/services/shoplist/shoplist.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -53,7 +54,7 @@ const config = {
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [AuthService, TasksService],
+  providers: [AuthService, TasksService, ShoplistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
