@@ -1,0 +1,17 @@
+<div style="margin-top: 10%;" class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="card border">
+        <div class="card-body" style="background-color: #BAF2D8;">
+        <div class="row">
+            <div class="col-md text-center">
+                <img style="padding-bottom: 30px;" class="img-fluid" src="https://familybook.nl/images/logo.svg">
+                </div>
+                <input type="text" class="form-control mb-2" placeholder="Email" #userEmail required autofocus>
+                <input type="password" class="form-control mb-2" placeholder="Password" #userPassword required>
+                <button class="btn btn-lg btn-primary btn-block mb-1" style="background-color: rgb(34, 136, 204); border: solid 2px black;" (click)="authService.login(userEmail.value, userPassword.value)">Login</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    

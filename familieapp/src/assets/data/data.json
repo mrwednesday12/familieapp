@@ -1,0 +1,16 @@
+{
+    "tasks": [
+      {
+        "name": "Afwasmachine",
+        "description": "Afwasmachine leegmaken en vullen",
+        "deadline":"05/02/20 - 15:00",
+        "id": 1
+      },
+      {
+        "name": "Badkamer poetsen",
+        "description": "Bad en douche uitwassen",
+        "deadline":"07/02/20 - 18:00",
+        "id": 2
+      }
+    ]
+  }

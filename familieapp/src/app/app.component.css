@@ -1,0 +1,9 @@
+#navbar a{
+    margin-right: 5px; 
+    border: 2px black solid;
+    background-color: rgb(34, 136, 204);
+   
+}
+#logout{
+    background-color: rgb(255, 103, 124);
+}

@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-md justify-content-center">
+            <table class="table">
+                <thead class="thead">
+                    <th>Taak</th>
+                    <th>Beschrijving</th>
+                    <th>Deadline</th>
+                    <th>Klaar</th>
+                </thead>
+                <tbody *ngFor="let task of tasks$ | async">
+                    <td>{{task.name}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.deadline}}</td>
+                    <td><button  class="btn btn-success">Gedaan</button></td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDolNGHUyxkacs2H7nmdrGHGT63WQErBdQ",
+    authDomain: "familieapp.firebaseapp.com",
+    databaseURL: "https://familieapp.firebaseio.com",
+    projectId: "familieapp",
+    storageBucket: "familieapp.appspot.com",
+    messagingSenderId: "463925134473",
+    appId: "1:463925134473:web:c43bd06d24ce8eee967258"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<div *ngIf="authService.isLoggedIn; else elseBlock">
+<nav id="navbar" class="navbar justify-content-center navbar-expand navbar-light bg-dark">
+  <a class="btn nav-link"  routerLink="home">Home</a>
+  <a class="btn nav-link"  routerLink="tasklist">Tasklist</a>
+  <a class="btn nav-link"  routerLink="shoplist">Shoplist</a>
+  <a class="btn nav-link" id="logout"  (click)="authService.logout()">Logout</a>
+</nav>
+</div>
+<ng-template #elseBlock></ng-template>
+
+
+
+
+  <router-outlet></router-outlet>
