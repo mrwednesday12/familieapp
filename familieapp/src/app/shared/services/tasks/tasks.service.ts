@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Task } from '../../model/tasks.model';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
@@ -17,6 +17,10 @@ url:string = 'http://localhost:3000/tasks';
   getTasks():Observable<Task[]>{
     return this.http
     .get<Task[]>(this.url)
-    .pipe(tap(results => console.log(results)));
+    .pipe(tap(results => results));
+  }
+
+  deleteTask(value) {
+    return this.http.delete(this.url + "/" + value);
   }
 }

@@ -16,9 +16,10 @@ import { AuthService } from './auth/auth.service';
 import { HttpClientModule} from '@angular/common/http';
 import { TasksService } from './shared/services/tasks/tasks.service';
 import { ShoplistService } from './shared/services/shoplist/shoplist.service';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'shoplist', component: ShoplistComponent },
   { path: 'tasklist', component: TasklistComponent},
   { path: 'login', component: LoginComponent},
@@ -52,7 +53,8 @@ const config = {
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [AuthService, TasksService, ShoplistService],
   bootstrap: [AppComponent]

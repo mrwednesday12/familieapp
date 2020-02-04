@@ -1,46 +1,28 @@
 {
-    "tasks": [
-      {
-        "name": "Afwasmachine",
-        "description": "Afwasmachine leegmaken en vullen",
-        "deadline":"05/02/20 - 15:00",
-        "id": 1
-      },
-      {
-        "name": "Badkamer poetsen",
-        "description": "Bad en douche uitwassen",
-        "deadline":"07/02/20 - 18:00",
-        "id": 2
-      },
-      {
-        "name": "Auto wassen",
-        "description": "Auto stofzuigen en buitenkant wassen",
-        "deadline":"08/02/20 - 13:00",
-        "id": 2
-      },
-      {
-        "name": "Gaan winkelen",
-        "description": "Naar bakker en slager gaan",
-        "deadline":"09/02/20 - 12:00",
-        "id": 2
-      }
-    ],
-    "shoppinglist": [
-      {
-        "name": "Melk",
-        "id": 1
-      },
-      {
-        "name": "Chips",
-        "id": 2
-      },
-      {
-        "name": "Gehakt",
-        "id": 3
-      },
-      {
-        "name": "Fruit",
-        "id": 4
-      }
-    ]
-  }
+  "tasks": [
+    {
+      "name":"TestTask",
+      "description":"TestDesc",
+      "deadline":"TestDeadline",
+      "id":1
+    }
+  ],
+  "shoppinglist": [
+    {
+      "name": "Melk",
+      "id": 1
+    },
+    {
+      "name": "Chips",
+      "id": 2
+    },
+    {
+      "name": "Gehakt",
+      "id": 3
+    },
+    {
+      "name": "Fruit",
+      "id": 4
+    }
+  ]
+}

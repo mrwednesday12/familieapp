@@ -20,7 +20,8 @@
 </script>
 
 <div *ngIf="authService.isLoggedIn; else elseBlock">
-<nav id="navbar" class="navbar justify-content-center navbar-expand navbar-light bg-dark">
+<nav id="navbar" class="navbar navbar-expand navbar-light bg-dark">
+  <iframe hidden src="http://free.timeanddate.com/clock/i7536fze/n48/tlbe14/fn10/fcfff/tct/pct/tt0" frameborder="0" width="254" height="18" allowTransparency="true"></iframe>
   <a class="btn nav-link"  routerLink="home">Home</a>
   <a class="btn nav-link"  routerLink="tasklist">Tasklist</a>
   <a class="btn nav-link"  routerLink="shoplist">Shoplist</a>
@@ -28,8 +29,5 @@
 </nav>
 </div>
 <ng-template #elseBlock></ng-template>
-
-
-
 
   <router-outlet></router-outlet>
