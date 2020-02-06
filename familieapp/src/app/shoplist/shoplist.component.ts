@@ -5,7 +5,7 @@ import { ShoplistService } from '../shared/services/shoplist/shoplist.service';
 import { Shoplist } from '../shared/model/shoplist.model';
 import { Observable } from 'rxjs';
 
-@Component({
+@Component({ 
   selector: 'app-shoplist',
   templateUrl: './shoplist.component.html',
   styleUrls: ['./shoplist.component.css']
