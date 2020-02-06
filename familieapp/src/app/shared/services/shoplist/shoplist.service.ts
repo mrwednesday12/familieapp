@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' 
 })
 
 export class ShoplistService {
