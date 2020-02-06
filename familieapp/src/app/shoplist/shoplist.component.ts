@@ -22,6 +22,6 @@ export class ShoplistComponent implements OnInit {
     }
 
     this.shoplist$ = this.shoplistService.getShoplist();
-
+// update
   }
 }
