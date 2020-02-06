@@ -8,6 +8,7 @@ import { Observable } from 'rxjs'
 import { TasksService } from '../shared/services/tasks/tasks.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import Swal from 'sweetalert2';
+import { database } from 'firebase';
 
 
 @Component({
@@ -27,10 +28,24 @@ export class TasklistComponent implements OnInit {
     this.tasksService.deleteTask(value)
     .subscribe(res => console.log(res));
   }
-  addTask(value){
-    
+  log(value){
+    console.log(value);
   }
-  
+  newTask(taskName: string, taskDescription: string, taskDeadline:string) {
+
+    if(taskName != "" && taskDescription != "" && taskDeadline.toString() != ""){
+      const newTask = new Task(taskName, taskDescription, taskDeadline ,null);
+      this.tasksService.addTask(newTask)
+      .subscribe((addedTask: Task) => {
+      // countries opnieuw ophalen in de subscription
+      this.tasks$ = this.tasksService.getTasks();
+      });
+    }
+    else{
+      Swal.fire("Vul alle velden in!");
+    }
+    
+}
   
   ngOnInit() {
     if (!this.authService.isLoggedIn) {

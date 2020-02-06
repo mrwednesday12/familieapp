@@ -7,32 +7,18 @@
     <h1>Taaklijst</h1>
     <div class="row">
         <div class="col-md justify-content-center">
-            
-
-            <table class="table ">
-                <thead class="thead thead-light">
-                    <th>Nummer</th>
-                    <th>Taak</th>
-                    <th>Beschrijving</th>
-                    <th>Deadline</th>
-                    <th style="text-align: right;"><button class="btn btn-success" [swal]="addTask">+</button></th>
+            <table class="table">
+                <thead class="thead">
+                    <th>Taak <input ng-keydown="log(naam.value)" id="naam" #naam></th>
+                    <th>Beschrijving <input type="text" #desc></th>
+                    <th>Deadline <input #deadline type="date"></th>
+                    <th style="text-align: right;"><button class="btn btn-success" (click)="newTask(naam.value, desc.value, deadline.value)">+</button></th>
                 </thead>
-<!-- Add New Task -->
-<swal 
-  #addTask hidden
-  title="Add new task"
-  text="This cannot be undone"
-  icon="question"
-  [showCancelButton]="true"
-  [focusCancel]="true"
-  (confirm)="addTask()">
-</swal>
                 <tbody *ngFor="let task of tasks$ | async">
                 
-                    <td>{{task.id}}</td>
-                    <td>{{task.name}}</td>
-                    <td>{{task.description}}</td>
-                    <td>{{task.deadline}}</td>
+                    <td><h5>{{task.name}}</h5></td>
+                    <td><h5>{{task.description}}</h5></td>
+                    <td><h5>{{task.deadline}}</h5></td>
                     <td style="text-align: right;"><button (click)="removeTask(task.id)" class="btn btn-success">Gedaan</button></td>
                 </tbody>
             </table>

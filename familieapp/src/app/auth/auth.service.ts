@@ -24,20 +24,13 @@ export class AuthService {
   });
   }
 
-  async home(){
-    this.router.navigate(['/home']);
-  }
-
   //Login method
   async login(email: string, password: string) {
   try {
   await this.afAuth.auth.signInWithEmailAndPassword(email, password)
   } 
   catch (e) { alert(e);}
-  
-  this.router.navigate(['/home']);
-  this.home();
-  console.log("Reachable");
+  window.history.back();
   }
 
 
@@ -54,5 +47,5 @@ export class AuthService {
   return user !== null;
   
  }
- }
+}
  

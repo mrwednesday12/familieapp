@@ -19,6 +19,10 @@ url:string = 'http://localhost:3000/tasks';
     .get<Task[]>(this.url)
     .pipe(tap(results => results));
   }
+  addTask(newTask){
+    const headers = new HttpHeaders().set("Content-type", "application/json");
+    return this.http.post(this.url, newTask, { headers: headers });
+  }
 
   deleteTask(value) {
     return this.http.delete(this.url + "/" + value);
