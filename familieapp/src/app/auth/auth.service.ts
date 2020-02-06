@@ -29,6 +29,7 @@ export class AuthService {
   try {
   await this.afAuth.auth.signInWithEmailAndPassword(email, password)
   } 
+  
   catch (e) { alert(e);}
   window.history.back();
   }

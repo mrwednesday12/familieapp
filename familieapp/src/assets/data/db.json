@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "name": "test",
+      "description": "test",
+      "deadline": "2020-02-13",
+      "id": 1
+    },
+    {
+      "name": "kutzooi",
+      "description": "kakaids",
+      "deadline": "2020-02-12",
+      "id": 2
+    }
+  ],
+  "shoppinglist": [
+    {
+      "name": "Melk",
+      "id": 1
+    },
+    {
+      "name": "Chips",
+      "id": 2
+    },
+    {
+      "name": "Gehakt",
+      "id": 3
+    },
+    {
+      "name": "Fruit",
+      "id": 4
+    }
+  ]
+}
