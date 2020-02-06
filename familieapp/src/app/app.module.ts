@@ -17,7 +17,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { TasksService } from './shared/services/tasks/tasks.service';
 import { ShoplistService } from './shared/services/shoplist/shoplist.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-import { CaalanderComponent } from './caalander/caalander.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -46,8 +45,7 @@ const config = {
     LoginComponent,
     ShoplistComponent,
     TasklistComponent,
-    HomeComponent,
-    CaalanderComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
